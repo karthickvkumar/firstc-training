@@ -1,0 +1,49 @@
+.container1{
+  height: 30vh;
+  border: 3px solid black;
+  margin: 2px;
+  display: flex;
+}
+.container2{
+  height: 30vh;
+  border: 3px solid black;
+  margin: 2px;
+}
+.container3{
+  height: 30vh;
+  border: 3px solid black;
+  margin: 2px;
+  display: flex;
+}
+
+.item1{
+  border: 1px solid rgb(255, 38, 0);
+  height: 100%;
+  width: 25%;
+  margin: 2px;
+}
+
+.item2{
+  border: 1px solid rgb(255, 38, 0);
+  height: 100%;
+  width: 75%;
+  margin: 2px;
+}
+.item11{
+  border: 1px solid rgb(255, 38, 0);
+  height: 100%;
+  width: 35%;
+  margin: 2px;
+}
+.item22{
+  border: 1px solid rgb(255, 38, 0);
+  height: 100%;
+  width: 30%;
+  margin: 2px;
+}
+.item33{
+  border: 1px solid rgb(255, 38, 0);
+  height: 100%;
+  width: 35%;
+  margin: 2px;
+}
