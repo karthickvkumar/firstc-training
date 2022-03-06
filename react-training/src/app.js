@@ -5,6 +5,7 @@ import LoginPage from "./pages/login";
 import RegisterPage from "./pages/register";
 import HomePage from "./pages/home";
 import MailPage from "./pages/mail";
+import FeebackPage from "./pages/feedback";
 
 import InboxPage from "./pages/inbox";
 import SentPage from "./pages/sent";
@@ -26,6 +27,7 @@ class App extends Component {
             <Route path="sent" element={<SentPage/>}></Route>
             <Route path="trash" element={<TrashPage/>}></Route>
           </Route>
+          <Route path="feedback" element={<FeebackPage/>}></Route>
         </Routes>
       </BrowserRouter>
     )
