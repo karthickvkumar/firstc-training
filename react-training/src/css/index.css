@@ -68,3 +68,8 @@ body{
   background-color: #04AA6D;
   color: white;
 }
+
+.profile-pic{
+  width: 50px;
+  border-radius: 50px;
+}

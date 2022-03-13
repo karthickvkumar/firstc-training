@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
+import axios from 'axios';
 
 const InboxPage = () => {
   const [profile, setProfile] = useState({
-    name : "", age : "", desgination : "", location : ""
+    name : "", age : "", desgination : "", location : "", job: ""
   });
 
   const [userList, setUserList] = useState([]);
@@ -15,6 +16,22 @@ const InboxPage = () => {
   const createProfile = () => {
     console.log(profile)
     setUserList([...userList, profile])
+  }
+
+  const submitProfile = () => {
+    const url = "https://reqres.in/api/users";
+
+    console.log(profile);
+
+    axios.post(url, profile)
+      .then((response) => {
+        console.log(response);
+        alert("Profile has beeen created")
+      })
+      .catch((error) => {
+        
+        console.log(error)
+      })
   }
 
   const userProfileList = userList.map((value, index) => {
@@ -35,6 +52,9 @@ const InboxPage = () => {
       <label>Enter your Name</label>
       <input type="text" onChange={handleProfileForm} name="name"/>
       <br></br>
+      <label>Enter your Job</label>
+      <input type="text" onChange={handleProfileForm} name="job"/>
+      <br></br>
       <label>Enter your Age</label>
       <input type="number" onChange={handleProfileForm} name="age"/>
       <br></br>
@@ -45,6 +65,7 @@ const InboxPage = () => {
       <input type="text" onChange={handleProfileForm} name="location"/>
       <br></br>
       <button onClick={() => createProfile()}>Create Profile</button>
+      <button onClick={() => submitProfile()}>Submit to POST API</button>
       <div>
         <table id="customers">
           <thead>
